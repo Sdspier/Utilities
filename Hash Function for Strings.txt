@@ -1,0 +1,8 @@
+    //Hash function for strings
+    public int hash(String s) {
+        int hash = 1315423911;
+        for (int i = 0; i < s.length(); i++) {
+            hash ^= ((hash << 5) + s.charAt(i) + (hash >> 2));
+        }
+        return hash;
+    }
